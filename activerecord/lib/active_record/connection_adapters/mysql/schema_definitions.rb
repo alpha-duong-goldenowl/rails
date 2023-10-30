@@ -53,7 +53,7 @@ module ActiveRecord
         included do
           define_column_methods :blob, :tinyblob, :mediumblob, :longblob,
             :tinytext, :mediumtext, :longtext, :unsigned_integer, :unsigned_bigint,
-            :unsigned_float, :unsigned_decimal
+            :unsigned_float, :unsigned_decimal, :linestring, :multilinestring
         end
       end
 

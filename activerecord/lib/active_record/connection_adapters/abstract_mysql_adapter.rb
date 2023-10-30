@@ -11,6 +11,8 @@ require "active_record/connection_adapters/mysql/schema_definitions"
 require "active_record/connection_adapters/mysql/schema_dumper"
 require "active_record/connection_adapters/mysql/schema_statements"
 require "active_record/connection_adapters/mysql/type_metadata"
+require "active_record/connection_adapters/mysql/type/linestring"
+require "active_record/connection_adapters/mysql/type/multilinestring"
 
 module ActiveRecord
   module ConnectionAdapters
@@ -44,6 +46,8 @@ module ActiveRecord
         blob:        { name: "blob" },
         boolean:     { name: "tinyint", limit: 1 },
         json:        { name: "json" },
+        linestring: { name: 'linestring' },
+        multilinestring: { name: 'multilinestring' },
       }
 
       class StatementPool < ConnectionAdapters::StatementPool # :nodoc:
