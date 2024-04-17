@@ -46,8 +46,8 @@ module ActiveRecord
         blob:        { name: "blob" },
         boolean:     { name: "tinyint", limit: 1 },
         json:        { name: "json" },
-        linestring: { name: 'linestring' },
-        multilinestring: { name: 'multilinestring' },
+        linestring:  { name: "linestring" },
+        multilinestring: { name: "multilinestring" },
       }
 
       class StatementPool < ConnectionAdapters::StatementPool # :nodoc:

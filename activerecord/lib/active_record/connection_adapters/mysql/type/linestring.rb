@@ -4,7 +4,7 @@ module ActiveRecord
   module ConnectionAdapters
     module MySQL
       module Type # :nodoc:
-        class Linestring < ActiveModel::Type::String
+        class Linestring < ActiveRecord::Type::Json
           def type
             :linestring
           end
